@@ -203,22 +203,62 @@ function checkPass3(e) {
 }
 
  function checkPass5(e) {
-   e.preventDefault();
+    e.preventDefault();
     const pass = prompt('Nhập mật khẩu để tải:');
 
     if (pass === 'T@mpro210394') {
-        // Hỏi chọn hệ điều hành
-        const choice = prompt("Chọn phiên bản để tải:\n1 = Windows\n2 = macOS");
 
-        if (choice === "1") {
-            window.open('https://mega.nz/folder/13EC2SDB#TH7nkJy9PlXSU8N3juWGzA', '_blank');
-        } 
-        else if (choice === "2") {
-            window.open('https://mega.nz/folder/ErkTWD7R#aXAOLNmHDzXXdykc0u11fg', '_blank'); // đặt link macOS ở đây
-        } 
-        else {
-            alert("Lựa chọn không hợp lệ!");
-        }
+        // Tạo popup chọn hệ điều hành
+        const box = document.createElement("div");
+        box.innerHTML = `
+            <div id="downloadBox" style="
+                position: fixed; 
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: rgba(0,0,0,0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            ">
+                <div style="
+                    background: white;
+                    padding: 20px;
+                    border-radius: 12px;
+                    text-align: center;
+                    max-width: 300px;
+                ">
+                    <h3 style="font-size: 18px; margin-bottom: 15px;">Chọn bản tải</h3>
+                    <button id="winBtn" style="
+                        background: #4f46e5;
+                        color: white;
+                        padding: 10px 15px;
+                        border-radius: 8px;
+                        width: 100%;
+                        margin-bottom: 10px;
+                    ">Tải Windows</button>
+
+                    <button id="macBtn" style="
+                        background: #16a34a;
+                        color: white;
+                        padding: 10px 15px;
+                        border-radius: 8px;
+                        width: 100%;
+                    ">Tải macOS</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(box);
+
+        // Xử lý khi bấm nút
+        document.getElementById("winBtn").onclick = () => {
+            window.open("https://drive.google.com/drive/folders/1e3a3aTSSVubBGbF9Wua9Wf14ujnQF6Hf", "_blank");
+            document.getElementById("downloadBox").remove();
+        };
+
+        document.getElementById("macBtn").onclick = () => {
+            window.open("https://example.com/macos", "_blank"); // Đặt link macOS vào đây
+            document.getElementById("downloadBox").remove();
+        };
 
     } else if (pass !== null) {
         alert('Sai mật khẩu!');
