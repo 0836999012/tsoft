@@ -52,21 +52,29 @@
     </header>
 
     <!-- Phần Giới Thiệu Chính (Hero Section) -->
-    <main class="py-16 md:py-24 bg-[url('https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/589075610_832908169528033_8144550163263391068_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=EmEXGzBSuDoQ7kNvwGJuJPc&_nc_oc=Adm3Bf99N9P6fntbX43EohZEw9e4g4a8wrmNpIXxMvHsJuASl9398OY1_PfREzXiEBs&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=qQSDjmjhbuGV8HQaM-epWA&oh=00_AfnL1bqH-yVoYg9fzJ6vjuovC80OORsrUCZp4u9t52eQOA&oe=693C5748')] bg-cover bg-center bg-no-repeat">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-gray-900 mb-4">
-                <span class="text-indigo-600">UY TÍN</span> - CHẤT LƯỢNG - BẢO HÀNH RÕ RÀNG
-            </h1>
-            <p class="text-xl text-gray-600 mb-10">
-                Sửa chữa Điện thoại & Máy tính – Nhanh, chuẩn, giá tốt.
-                <BR>
-                Hỗ trợ linh hoạt tại cửa hàng hoặc remote từ xa.
-            </p>
-            <a href="#phan-mem" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
-                Liên hệ ngay!
-            </a>
-        </div>
-    </main>
+    <main class="relative py-16 md:py-24 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('LINK_ANH');">
+
+    <!-- Lớp làm mờ + tối nền -->
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+    <div class="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-4">
+            <span class="text-indigo-300">UY TÍN</span> - CHẤT LƯỢNG - BẢO HÀNH RÕ RÀNG
+        </h1>
+
+        <p class="text-xl text-gray-100 mb-10">
+            Sửa chữa Điện thoại & Máy tính – Nhanh, chuẩn, giá tốt.<br>
+            Hỗ trợ linh hoạt tại cửa hàng hoặc remote từ xa.
+        </p>
+
+        <a href="#phan-mem"
+           class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
+            Liên hệ ngay!
+        </a>
+    </div>
+</main>
+
 
     <!-- Phần Danh Sách Sản Phẩm (Download Links) -->
     <section id="phan-mem" class="pb-20 md:pb-32 bg-white">
