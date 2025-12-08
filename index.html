@@ -203,61 +203,77 @@ function checkPass3(e) {
 }
 
  function checkPass5(e) {
-    e.preventDefault();
+      e.preventDefault();
     const pass = prompt('Nhập mật khẩu để tải:');
-
+    
     if (pass === 'T@mpro210394') {
-
         // Tạo popup chọn hệ điều hành
-        const box = document.createElement("div");
-        box.innerHTML = `
-            <div id="downloadBox" style="
-                position: fixed; 
-                top: 0; left: 0; right: 0; bottom: 0;
-                background: rgba(0,0,0,0.6);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 9999;
-            ">
-                <div style="
-                    background: white;
-                    padding: 20px;
-                    border-radius: 12px;
-                    text-align: center;
-                    max-width: 300px;
-                ">
-                    <h3 style="font-size: 18px; margin-bottom: 15px;">Chọn bản tải</h3>
-                    <button id="winBtn" style="
-                        background: #4f46e5;
-                        color: white;
-                        padding: 10px 15px;
-                        border-radius: 8px;
-                        width: 100%;
-                        margin-bottom: 10px;
-                    ">Tải Windows</button>
+        const popup = document.createElement('div');
+        popup.id = "osPopup";
+        popup.style.position = "fixed";
+        popup.style.top = "50%";
+        popup.style.left = "50%";
+        popup.style.transform = "translate(-50%, -50%)";
+        popup.style.padding = "20px";
+        popup.style.background = "white";
+        popup.style.borderRadius = "10px";
+        popup.style.boxShadow = "0 0 20px rgba(0,0,0,0.3)";
+        popup.style.zIndex = "9999";
+        popup.style.textAlign = "center";
 
-                    <button id="macBtn" style="
-                        background: #16a34a;
-                        color: white;
-                        padding: 10px 15px;
-                        border-radius: 8px;
-                        width: 100%;
-                    ">Tải macOS</button>
-                </div>
+        popup.innerHTML = `
+            <div style="display:flex; justify-content:flex-end;">
+                <button id="closePopup" style="
+                    background:red; 
+                    color:white; 
+                    border:none; 
+                    padding:5px 10px;
+                    border-radius:5px;
+                    cursor:pointer;
+                ">X</button>
             </div>
-        `;
-        document.body.appendChild(box);
 
-        // Xử lý khi bấm nút
-        document.getElementById("winBtn").onclick = () => {
-            window.open("https://drive.google.com/drive/folders/1e3a3aTSSVubBGbF9Wua9Wf14ujnQF6Hf", "_blank");
-            document.getElementById("downloadBox").remove();
+            <h3>Chọn hệ điều hành để tải</h3>
+
+            <button id="dlWin" style="
+                margin-top:10px;
+                padding:10px 20px;
+                border:none;
+                background:#0078ff;
+                color:white;
+                border-radius:6px;
+                cursor:pointer;
+                width:150px;
+            ">Windows</button>
+
+            <button id="dlMac" style="
+                margin-top:10px;
+                margin-left:10px;
+                padding:10px 20px;
+                border:none;
+                background:#333;
+                color:white;
+                border-radius:6px;
+                cursor:pointer;
+                width:150px;
+            ">macOS</button>
+        `;
+
+        document.body.appendChild(popup);
+
+        // Nút đóng popup
+        document.getElementById("closePopup").onclick = () => popup.remove();
+
+        // Link tải Windows
+        document.getElementById("dlWin").onclick = () => {
+            window.open("https://mega.nz/folder/13EC2SDB#TH7nkJy9PlXSU8N3juWGzA", "_blank");
+            popup.remove();
         };
 
-        document.getElementById("macBtn").onclick = () => {
-            window.open("https://example.com/macos", "_blank"); // Đặt link macOS vào đây
-            document.getElementById("downloadBox").remove();
+        // Link tải macOS
+        document.getElementById("dlMac").onclick = () => {
+            window.open("https://mega.nz/folder/ErkTWD7R#aXAOLNmHDzXXdykc0u11fg", "_blank");
+            popup.remove();
         };
 
     } else if (pass !== null) {
