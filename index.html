@@ -3,422 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSof Mobile & PC</title>
-    <!-- Tải Tailwind CSS để có phong cách thiết kế hiện đại, sạch sẽ -->
+    <title>TSoft Mobile & PC</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Thiết lập font Inter cho toàn bộ trang và chế độ smooth scrolling */
         body {
             font-family: "Segoe UI", sans-serif;
-            background-color: #f5f5f7; /* Màu nền nhẹ nhàng, giống Apple */
-            color: #1d1d1f; /* Màu chữ đen đậm */
+            background-color: #f5f5f7;
+            color: #1d1d1f;
         }
-        /* Hiệu ứng gradient subtle cho thanh điều hướng hoặc footer */
         .header-gradient {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+            background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.8));
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
         }
-        /* Hiệu ứng card nổi bật khi hover */
         .software-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform .3s, box-shadow .3s;
         }
         .software-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,.1);
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Thanh Điều Hướng (Header) -->
-    <header class="header-gradient sticky top-0 z-10 border-b border-gray-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo/Tên thương hiệu -->
-            <a href="https://www.facebook.com/tsoft66" class="text-2xl font-semibold tracking-tight text-gray-800 flex items-center">
-              <img src="logo.jpg" class="w-6 h-6 mr-2" alt="Logo">
-                TSoft Mobile & PC
-            </a>
-            <!-- Các liên kết điều hướng (Tùy chọn) -->
-            <nav class="hidden md:block space-x-8 text-sm font-medium">
-               <a href="https://www.mediafire.com/file/p4yst8j46yx2sht/Remote_Connection_Support_byThanhTam.rar/file" class="text-gray-600 hover:text-indigo-600" target="_blank" rel="noopener noreferrer">Phần mềm hỗ trợ</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Phần Giới Thiệu Chính (Hero Section) -->
-    <main class="relative py-16 md:py-24 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
-
-
-    <!-- Lớp làm mờ + tối nền -->
-    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-
-    <div class="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-4">
-            UY TÍN - CHẤT LƯỢNG - BẢO HÀNH RÕ RÀNG
-        </h1>
-
-        <p class="text-xl text-gray-100 mb-10">
-            Dịch vụ sửa chữa Điện thoại & Máy tính – Nhanh, chuẩn, giá tốt.
-            Hỗ trợ linh hoạt tại cửa hàng hoặc remote từ xa.
-        </p>
-
-        <a href="https://zalo.me/0836999012"
-           class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
-            Liên hệ ngay!
+<!-- HEADER -->
+<header class="header-gradient sticky top-0 z-10 border-b">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="https://www.facebook.com/tsoft66" target="_blank"
+           class="flex items-center text-2xl font-semibold">
+            <img src="logo.jpg" class="w-6 h-6 mr-2">
+            TSoft Mobile & PC
+        </a>
+        <a href="https://www.mediafire.com/file/p4yst8j46yx2sht/Remote_Connection_Support_byThanhTam.rar/file"
+           target="_blank"
+           class="text-gray-600 hover:text-indigo-600">
+            Phần mềm hỗ trợ
         </a>
     </div>
-</main>
+</header>
 
+<!-- HERO -->
+<main class="relative py-24 bg-cover bg-center"
+      style="background-image:url('bg.jpg')">
 
-    <!-- Phần Danh Sách Sản Phẩm (Download Links) -->
-    <section id="phan-mem" class="pb-20 md:pb-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-10 text-center"><br>Công Cụ phổ biến</h2>
+    <div class="absolute inset-0 bg-black/50"></div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- Card 1 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-red-100 text-red-600">
-                
-             <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">UnlockTool</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Off icloud với proxy cho iPhone/iPad Open Menu<br>- Bypass FRP android <br>- Bypass iCloud iPhone/ iPad Chip A7 - A11 <br>- Skip MDM iPhone/iPad</p>
-        </div>
-        <a href="#" onclick="checkPass1(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
-        </a>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-blue-100 text-blue-600">
-            <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-          
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">67CafeRacer Hidden Account A12+ Pro</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Ẩn tài khoản iCloud <br>- Xóa mã giới hạn <br>- Chặn update ota <br> Fake reset.<br>- Hổ trợ ios 17+</p>
-        </div>
-        <a href="#" onclick="checkPass2(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
-        </a>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">FRPFILE A12+</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Hide iCloud Account <br>- Remove screentime passcode <br>- Fake reset <br>Bloakc OTA. <br>- Bypass A12+ </p>
-        </div>
-        <a href="#" onclick="checkPass3(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows)
-        </a>
-    </div>
-       <!-- Card 5 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">67CAFERACER A12+</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Có thông báo <br>- Đăng nhập iCloud không proxy <br>- Appstore: Ok <br>- Fake reset <br>- IOS hổ trợ 26.0.1 - 26.1</p>
-        </div>
-        <a href="#" onclick="checkPass4(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về ( Windows)
-        </a>
-    </div>
-   <!-- Card 6 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">UNITOOL A12+</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Hide iCloud Account <br>- Remove screentime passcode <br>- Fake reset <br>- Bloakc OTA. <br>- Bypass A12+ </p>
-        </div>
-        <a href="#" onclick="checkPass5(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (Windows/MacOS)
-        </a>
-    </div>
-      <!-- Card 7 -->
-    <div class="software-card bg-white p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between">
-        <div>
-            <div class="mb-4 inline-block p-3 rounded-xl bg-green-100 text-green-600">
-               <img src="https://icon-library.com/images/software-icon-png/software-icon-png-10.jpg" class="w-14 h-14"/>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">USBPatcher A5 - A11</h3>
-            <p class="text-gray-500 mb-6 text-sm">- Bypass Hello <br>- Jaibrak <br>- MDM <br>- Change SN. <br>- Ramdisk </p>
-        </div>
-        <a href="#" onclick="checkPass6(event)"
-           class="w-full text-center inline-block bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
-            Tải Về (MacOS)
-        </a>
-    </div>
-</div>
-
-<!-- --- JAVASCRIPT --- -->
-<script>
-function checkPass1(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === '74111') {
-        window.open('https://www.mediafire.com/file/m3a5vncpc85yhlf/USB_Redirector.rar/file', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
-function checkPass2(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === '74111') {
-        window.open('https://file.unlocktool.net/', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
-function checkPass3(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === 74111') {
-        window.open('https://mega.nz/folder/iRt2hb4Z#S6FcOGyW3OaBcKWuc8q9zA/file/vEkySRha', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
-    function checkPass4(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === '74111') {
-        window.open('https://drive.google.com/drive/folders/1e3a3aTSSVubBGbF9Wua9Wf14ujnQF6Hf', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-
- function checkPass5(e) {
-     e.preventDefault();
-
-    // Tạo popup nhập mật khẩu
-    const popup = document.createElement('div');
-    popup.id = "passPopup";
-    popup.style.position = "fixed";
-    popup.style.top = "50%";
-    popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.padding = "20px";
-    popup.style.background = "white";
-    popup.style.borderRadius = "10px";
-    popup.style.boxShadow = "0 0 20px rgba(0,0,0,0.3)";
-    popup.style.zIndex = "9999";
-    popup.style.textAlign = "center";
-
-    popup.innerHTML = `
-        <div style="display:flex; justify-content:flex-end;">
-            <button id="closePassPopup" style="
-                background:red; 
-                color:white; 
-                border:none; 
-                padding:5px 10px;
-                border-radius:5px;
-                cursor:pointer;
-            ">X</button>
-        </div>
-
-        <h3>Nhập mật khẩu để tải</h3>
-        <input id="passwordInput" type="password" placeholder="Mật khẩu..." 
-            style="
-                padding:10px;
-                width:90%;
-                margin-top:10px;
-                border-radius:6px;
-                border:1px solid #ccc;
-                font-size:16px;
-            ">
-        <br>
-        <button id="confirmPass" style="
-            margin-top:15px;
-            padding:10px 20px;
-            border:none;
-            background:#0078ff;
-            color:white;
-            border-radius:6px;
-            cursor:pointer;
-            width:150px;
-        ">Xác nhận</button>
-    `;
-
-    document.body.appendChild(popup);
-
-    // Nút đóng popup
-    document.getElementById("closePassPopup").onclick = () => popup.remove();
-
-    // Khi nhấn Xác nhận mật khẩu
-    document.getElementById("confirmPass").onclick = () => {
-        const pass = document.getElementById("passwordInput").value;
-
-        if (pass === "T@mpro210394") {
-
-            // Xóa popup mật khẩu
-            popup.remove();
-
-            // Tạo popup chọn hệ điều hành
-            const popup2 = document.createElement('div');
-            popup2.id = "osPopup";
-            popup2.style.position = "fixed";
-            popup2.style.top = "50%";
-            popup2.style.left = "50%";
-            popup2.style.transform = "translate(-50%, -50%)";
-            popup2.style.padding = "20px";
-            popup2.style.background = "white";
-            popup2.style.borderRadius = "10px";
-            popup2.style.boxShadow = "0 0 20px rgba(0,0,0,0.3)";
-            popup2.style.zIndex = "9999";
-            popup2.style.textAlign = "center";
-
-            popup2.innerHTML = `
-                <div style="display:flex; justify-content:flex-end;">
-                    <button id="closePopup2" style="
-                        background:red; 
-                        color:white; 
-                        border:none; 
-                        padding:5px 10px;
-                        border-radius:5px;
-                        cursor:pointer;
-                    ">X</button>
-                </div>
-
-                <h3>Chọn hệ điều hành để tải</h3>
-
-                <button id="dlWin" style="
-                    margin-top:10px;
-                    padding:10px 20px;
-                    border:none;
-                    background:#0078ff;
-                    color:white;
-                    border-radius:6px;
-                    cursor:pointer;
-                    width:150px;
-                ">Windows</button>
-
-                <button id="dlMac" style="
-                    margin-top:10px;
-                    margin-left:10px;
-                    padding:10px 20px;
-                    border:none;
-                    background:#333;
-                    color:white;
-                    border-radius:6px;
-                    cursor:pointer;
-                    width:150px;
-                ">macOS</button>
-            `;
-
-            document.body.appendChild(popup2);
-
-            // Nút đóng
-            document.getElementById("closePopup2").onclick = () => popup2.remove();
-
-            // Link tải Windows
-            document.getElementById("dlWin").onclick = () => {
-                window.open("https://mega.nz/folder/13EC2SDB#TH7nkJy9PlXSU8N3juWGzA", "_blank");
-                popup2.remove();
-            };
-
-            // Link tải macOS
-            document.getElementById("dlMac").onclick = () => {
-                window.open("https://mega.nz/folder/ErkTWD7R#aXAOLNmHDzXXdykc0u11fg", "_blank");
-                popup2.remove();
-            };
-
-        } else {
-            alert("Sai mật khẩu!");
-        }
-    };
-}
-    function checkPass6(e) {
-    e.preventDefault();
-    const pass = prompt('Nhập mật khẩu để tải:');
-    if (pass === 'T@mpro210394') {
-        window.open('https://mega.nz/folder/M291gKIb#Thu-4sOoIWbVv9aAaDFBew', '_blank');
-    } else if (pass !== null) {
-        alert('Sai mật khẩu!');
-    }
-}
-</script>
-
-            
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="ho-tro" class="border-t border-gray-200 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
-            <p>&copy; 2025 TSoft Mobile & PC | Cao Lãnh - Đồng Tháp.</p>
-            <div class="mt-2 space-x-4">
-                <a href="#" class="hover:text-gray-700">Điều khoản</a>
-                <span class="text-gray-300">|</span>
-                <a href="#" class="hover:text-gray-700">Chính sách Bảo mật</a>
-                <span class="text-gray-300">|</span>
-                <a href="mailto:support@example.com" class="hover:text-gray-700">Liên hệ Hỗ trợ</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- JavaScript: Mô phỏng hành vi tải về hoặc thông báo thành công (Không dùng alert) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const downloadLinks = document.querySelectorAll('a[href^="https://example.com/download"]');
-            
-            downloadLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    // Ngăn chặn chuyển hướng thực tế (vì đây là mock link)
-                    e.preventDefault(); 
-                    
-                    // Lấy tên phần mềm từ thẻ cha
-                    const card = e.currentTarget.closest('.software-card');
-                    const softwareName = card.querySelector('h3').textContent;
-                    
-                    // Thông báo tải xuống thành công (dùng DOM manipulation thay vì alert)
-                    const messageBox = document.createElement('div');
-                    messageBox.className = 'fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-2xl opacity-0 transition-opacity duration-500';
-                    messageBox.textContent = `Bắt đầu tải xuống: ${softwareName}. Vui lòng kiểm tra thư mục tải về của bạn.`;
-                    
-                    document.body.appendChild(messageBox);
-                    
-                    // Hiển thị thông báo
-                    setTimeout(() => {
-                        messageBox.style.opacity = '1';
-                    }, 10);
-                    
-                    // Ẩn thông báo sau 4 giây
-                    setTimeout(() => {
-                        messageBox.style.opacity = '0';
-                        setTimeout(() => messageBox.remove(), 500);
-                    }, 4000);
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
+    <div class="relative text-center ma
