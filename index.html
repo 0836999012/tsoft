@@ -51,4 +51,114 @@
 
     <div class="absolute inset-0 bg-black/50"></div>
 
-    <div class="relative text-center ma
+    <div class="relative text-center max-w-4xl mx-auto text-white px-4">
+        <h1 class="text-5xl font-extrabold mb-4">
+            UY TÍN - CHẤT LƯỢNG - BẢO HÀNH RÕ RÀNG
+        </h1>
+        <p class="text-xl mb-8">
+            Sửa chữa Điện thoại & Máy tính – Hỗ trợ tại cửa hàng hoặc remote từ xa
+        </p>
+        <a href="https://zalo.me/0836999012"
+           target="_blank"
+           class="inline-block bg-indigo-600 px-8 py-3 rounded-full hover:bg-indigo-700">
+            Liên hệ ngay
+        </a>
+    </div>
+</main>
+
+<!-- DANH SÁCH TOOL -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">Công cụ phổ biến</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<!-- CARD -->
+<div class="software-card p-8 rounded-2xl shadow-xl border">
+    <h3 class="text-xl font-semibold mb-3">UnlockTool</h3>
+    <p class="text-gray-500 mb-6 text-sm">
+        Off iCloud – Bypass FRP – Skip MDM
+    </p>
+    <a href="#" onclick="checkPass(event,'74111','https://www.mediafire.com/file/m3a5vncpc85yhlf/USB_Redirector.rar/file')"
+       class="block text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
+        Tải về (Windows)
+    </a>
+</div>
+
+<div class="software-card p-8 rounded-2xl shadow-xl border">
+    <h3 class="text-xl font-semibold mb-3">67CafeRacer A12+</h3>
+    <p class="text-gray-500 mb-6 text-sm">
+        Ẩn iCloud – Fake reset – iOS 17+
+    </p>
+    <a href="#" onclick="checkPass(event,'74111','https://file.unlocktool.net/')"
+       class="block text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
+        Tải về
+    </a>
+</div>
+
+<div class="software-card p-8 rounded-2xl shadow-xl border">
+    <h3 class="text-xl font-semibold mb-3">USBPatcher A5–A11</h3>
+    <p class="text-gray-500 mb-6 text-sm">
+        Bypass Hello – Jailbreak – Ramdisk
+    </p>
+    <a href="#" onclick="checkPass(event,'T@mpro210394','https://mega.nz/folder/M291gKIb#Thu-4sOoIWbVv9aAaDFBew')"
+       class="block text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
+        Tải về (macOS)
+    </a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- POPUP PASSWORD SCRIPT -->
+<script>
+function checkPass(e, correctPass, link) {
+    e.preventDefault();
+
+    const popup = document.createElement("div");
+    popup.style = `
+        position:fixed;top:50%;left:50%;
+        transform:translate(-50%,-50%);
+        background:white;padding:20px;
+        border-radius:10px;
+        box-shadow:0 0 20px rgba(0,0,0,.3);
+        z-index:9999;text-align:center;
+    `;
+
+    popup.innerHTML = `
+        <div style="text-align:right">
+            <button id="close" style="background:red;color:white;border:none;padding:5px 10px;border-radius:5px">X</button>
+        </div>
+        <h3 class="mb-3 font-semibold">Nhập mật khẩu</h3>
+        <input id="pass" type="password"
+               placeholder="******"
+               style="padding:10px;width:100%;border:1px solid #ccc;border-radius:6px">
+        <button id="ok"
+                style="margin-top:15px;background:#4f46e5;color:white;padding:10px 20px;border:none;border-radius:6px">
+            Xác nhận
+        </button>
+    `;
+
+    document.body.appendChild(popup);
+
+    popup.querySelector("#close").onclick = () => popup.remove();
+
+    popup.querySelector("#ok").onclick = () => {
+        const pass = popup.querySelector("#pass").value;
+        if (pass === correctPass) {
+            window.open(link, "_blank");
+            popup.remove();
+        } else {
+            alert("Sai mật khẩu!");
+        }
+    };
+}
+</script>
+
+<footer class="border-t py-10 text-center text-sm text-gray-500">
+    © 2025 TSoft Mobile & PC | Cao Lãnh - Đồng Tháp
+</footer>
+
+</body>
+</html>
