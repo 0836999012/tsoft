@@ -26,7 +26,52 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
-        /* Custom Scrollbar */
+        
+        /* HIỆU ỨNG CHỮ GRADIENT RỰC RỠ */
+        .text-vivid-gradient {
+            background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        /* NÚT GRADIENT HỒNG - TÍM (Vivid Gradient) */
+        .btn-vivid-gradient {
+            background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+            box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-vivid-gradient:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            box-shadow: 0 8px 25px rgba(255, 0, 128, 0.5);
+        }
+
+        /* NÚT TẢI VỀ GRADIENT XANH (Download Gradient) */
+        .btn-download-gradient {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-download-gradient:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.5);
+        }
+
+        /* NÚT XÁC NHẬN GRADIENT CAM - HỒNG */
+        .btn-orange-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-orange-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.5);
+        }
+
+        /* Thanh cuộn tùy chỉnh */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -41,8 +86,8 @@
             background: #555;
         }
         .modal-overlay {
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
         }
     </style>
 </head>
