@@ -90,6 +90,38 @@
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(8px);
         }
+                /* Dropdown Animation - Cập nhật để dùng class active thay vì hover */
+        .dropdown-menu {
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .dropdown-menu.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .hero-bg {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+        }
+        
+        /* Xoay icon khi mở menu */
+        .dropdown-icon {
+            transition: transform 0.2s ease;
+        }
+        .dropdown-icon.rotate {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="antialiased">
