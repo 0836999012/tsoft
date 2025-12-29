@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
+        <style>
         body {
             font-family: 'Inter', "Segoe UI", sans-serif;
             background-color: #f5f5f7;
@@ -28,7 +28,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
         
-        /* HIỆU ỨNG CHỮ GRADIENT RỰC RỠ */
         .text-vivid-gradient {
             background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
             -webkit-background-clip: text;
@@ -37,7 +36,6 @@
             display: inline-block;
         }
 
-        /* NÚT GRADIENT HỒNG - TÍM (Vivid Gradient) */
         .btn-vivid-gradient {
             background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
             box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
@@ -49,54 +47,28 @@
             box-shadow: 0 8px 25px rgba(255, 0, 128, 0.5);
         }
 
-        /* NÚT TẢI VỀ GRADIENT XANH (Download Gradient) */
         .btn-download-gradient {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
             box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
             transition: all 0.3s ease;
         }
-        .btn-download-gradient:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.05);
-            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.5);
-        }
 
-        /* NÚT XÁC NHẬN GRADIENT CAM - HỒNG */
         .btn-orange-gradient {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
             transition: all 0.3s ease;
         }
-        .btn-orange-gradient:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.5);
-        }
 
-        /* Thanh cuộn tùy chỉnh */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        .modal-overlay {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(8px);
-        }
-           /* Dropdown Animation - Cập nhật để dùng class active thay vì hover */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+
         .dropdown-menu {
             opacity: 0;
             transform: translateY(10px);
             pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Tăng thời gian mượt hơn */
-            visibility: hidden; /* Tránh việc menu vẫn chiếm diện tích ẩn */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            visibility: hidden;
         }
         
         .dropdown-menu.active {
@@ -104,7 +76,7 @@
             transform: translateY(0);
             pointer-events: auto;
             visibility: visible;
-}
+        }
 
         .hero-bg {
             background-image: url('bg.jpg');
@@ -112,22 +84,10 @@
             background-position: center;
         }
         
-        .modal-overlay {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(8px);
-        }
-        
-        /* Xoay icon khi mở menu */
-        .dropdown-icon {
-            transition: transform 0.2s ease;
-        }
-        .dropdown-icon.rotate {
-            transform: rotate(180deg);
-        }
+        .dropdown-icon { transition: transform 0.2s ease; }
+        .dropdown-icon.rotate { transform: rotate(180deg); }
 
-         .highlight-container {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--apple-gray);
+        .highlight-container {
             padding: 80px 10px;
             display: flex;
             justify-content: center;
@@ -137,19 +97,13 @@
         .highlight-card {
             max-width: 1000px;
             width: 100%;
-            background: var(--glass-bg);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             border-radius: 30px;
             padding: 60px 40px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-5px);
         }
 
         .badge {
@@ -162,75 +116,45 @@
             font-weight: 600;
             margin-bottom: 24px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .highlight-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            color: #1d1d1f;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
+        /* AI Chat Styles */
+        .ai-consultant {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 40px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
         }
 
-        .highlight-description {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
+        .typing-indicator {
+            display: none;
             color: #86868b;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.5;
+            font-size: 14px;
+            margin-top: 10px;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .feature-item {
+        .ai-result {
+            display: none;
+            margin-top: 20px;
             padding: 20px;
+            border-radius: 16px;
+            background: #f8fafc;
+            border-left: 4px solid #7928ca;
+            animation: fadeIn 0.5s ease-out;
         }
 
-        .feature-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-            display: block;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .feature-text {
-            font-weight: 600;
-            color: #1d1d1f;
+        #aiInput:focus {
+            box-shadow: 0 0 0 4px rgba(121, 40, 202, 0.1);
         }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--apple-blue);
-            color: white;
-            padding: 18px 36px;
-            border-radius: 30px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #0077ed;
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
-
-        @media (max-width: 768px) {
-            .highlight-card {
-                padding: 40px 20px;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }    </style>
+    </style>
 </head>
 <body class="antialiased">
 
