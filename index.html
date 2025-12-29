@@ -124,7 +124,113 @@
         .dropdown-icon.rotate {
             transform: rotate(180deg);
         }
-    </style>
+
+         .highlight-container {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--apple-gray);
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .highlight-card {
+            max-width: 1000px;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff3b30, #ff9500);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .highlight-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #1d1d1f;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .highlight-description {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: #86868b;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.5;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-item {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-text {
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--apple-blue);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0077ed;
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .highlight-card {
+                padding: 40px 20px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }    </style>
 </head>
 <body class="antialiased">
 
@@ -211,9 +317,35 @@
     </div>
 
 </main>
+ <!-- block fmi -->
+ <section class="highlight-container">
+        <div class="highlight-card">
+            <span class="badge">Mới nhất</span>
+            <h2 class="highlight-title">Giải pháp tối ưu cho máy vay icloud đang ở ios 26.2 +</h2>
+            <p class="highlight-description">
+                Công nghệ đột phá giúp xử lý mọi rào cản trên phiên bản iOS mới nhất. An toàn, bảo mật và hiệu quả tuyệt đối cho thiết bị của bạn.
+            </p>
 
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <p class="feature-text">Tốc độ xử lý nhanh</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <p class="feature-text">Bảo mật dữ liệu 100%</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔄</span>
+                    <p class="feature-text">Hỗ trợ cập nhật lâu dài</p>
+                </div>
+            </div>
 
+            <a href="tel:0836999012" class="cta-button">Liên hệ hỗ trợ ngay</a>
+        </div>
+    </section>
 
+    
     <!-- Software Section -->
     <section id="phan-mem" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
